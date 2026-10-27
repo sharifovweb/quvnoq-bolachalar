@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🦁 Quvnoq Bolachalar — Bolalar Uchun Sehrli Musobaqalar va O'yinlar Platformasi
 
-## Getting Started
+**«Quvnoq Bolachalar»** — O'zbekiston umumta'lim maktablari o'quvchilari va bolajonlar uchun mo'ljallangan interaktiv ta'limiy musobaqalar, bilimlarni sinovdan o'tkazuvchi qiziqarli o'yinlar hamda rasmiy bayramona faxriy diplomlar platformasi! 🌟
 
-First, run the development server:
+**👩‍🏫 Loyiha muallifi va tashabbuskori:** Odilova Mahsudaxon
 
+---
+
+## 🎮 Platformadagi 6 Ta Asosiy O'yin Yo'nalishi
+
+1. **🦁 Zukko Bilimdon (Viktorina)**
+   - 5 ta sehrli mavzu (*Hayvonot olami*, *Koinot sirlari*, *Ertaklar*, *Topqir mantiq*, *Tabiat va salomatlik*).
+   - 10 ta chaqqon savol, jonlar (❤️❤️❤️), savol taymeri (15s), streak combo bonusi va qiziqarli ilmiy faktlar.
+
+2. **🃏 Sehrli Kartochkalar (Xotira O'yini)**
+   - 3 xil qiyinlik darajasi: Oson (8 ta), O'rta (12 ta), Qiyin (16 ta).
+   - 4 ta mavzu: *Quvnoq Hayvonlar*, *Shirin Mevalar*, *Koinot Sayohati*, *Sehrli O'yinchoqlar*.
+   - 3D kartochka aylanish effekti, vaqt va urinishlar hisobi.
+
+3. **⚡ Raqamlar Sehrgari (60 Soniyalik Tezkor Arifmetika)**
+   - Mevali ko'rgazmali hisoblash marafon (🍎 + 🍎).
+   - 1-3 darajalar (qo'shish, ayirish, karra jadvali).
+   - Har bir to'g'ri javob uchun +2 soniya vaqt bonusi va olovli combo (`🔥 3x`, `🔥 5x`).
+
+4. **🧩 So'z Yasovchi Zukko (Lug'at va Savodxonlik)**
+   - Aralashgan harf pufakchalarini to'g'ri tartibda terib, so'z yasash.
+   - Rasmli va emojili yordamchi maslahat (💡).
+
+5. **🎈 Ranglar va Shakllar (Chaqqonlik va Refleks)**
+   - Aniq rangli SVG vektor shakllari (Yashil Uchburchak, Sariq Yulduz, Moviy Kvadrat, Binafsha Yurakcha...).
+   - Ranglar va shakllar 100% to'g'ri moslashgan, xilma-xil aralashgan 9 ta katakli maydon.
+
+6. **🎨 Mohir Qo'llar: Interaktiv Mozaika & Aplikatsiya Ustaxonasi**
+   - Geometrik shakllar va rangli qog'ozlardan san'at asarlari terish (*🚀 Raketa*, *🦋 Kapalak*, *🏡 Quvnoq Uy*).
+   - Mehnat ta'limi xavfsizlik qoidalari (*✂️ Qaychi*, *🧴 Yelim*, *🧹 Tozalik*) va mini-test.
+
+---
+
+## 🌟 Maxsus Imkoniyatlar
+
+- **🔑 4 Xonali Kod orqali Musobaqaga Ulanish**: Sinfdoshlar bilan birgalikda ustoz e'lon qilgan kod (masalan: `7492`, `2026`, `5555`, `8844`) orqali bellashuvga kirish.
+- **📜 Rasmiy Faxriy Diplom & Sertifikat Studiyasi**: O'quvchi ismi, erishgan yutug'i sababi, fasl mavzusi va medalini tanlab, diplomni **darhol chop etish (🖨️)** yoki **yuqori aniqlikdagi PNG rasm sifatida yuklab olish (📥)**.
+- **👩‍🏫 Ustoz va Murabbiy Kabineti**: O'qituvchilar yangi musobaqa yaratib, unga 4 xonali kod belgilashi va o'quvchilarga taqdim etishi mumkin.
+- **🏆 Chempionlar Shon-Sharafi**: Eng yuqori ball va yulduz to'plagan bolajonlarning oltin, kumush va bronza shohsupasi.
+- **🔊 Sof Web Audio API Ovoz Dvigateli**: Qo'shimcha audio fayllarsiz brauzerning o'zida quvnoq ohanglar, to'g'ri javob akkordlari va tantanali g'alaba fanfari.
+- **📱 100% Mobil va Planshet Moslashuvchanligi**: Har qanday smartfon va planshetlarda qulay ishlaydi, maxsus mobil menyu mavjud.
+
+---
+
+## 🚀 O'rnatish va Ishga Tushirish
+
+### 1. Bog'liqliklarni o'rnatish:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Dasturni lokal ishga tushirish (Development):
+```bash
+npm run dev
+```
+Brauzerda oching: [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 3. Loyihani yig'ish (Production Build):
+```bash
+npm run build
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🛠️ Texnologiyalar
+- **Frontend**: [Next.js](https://nextjs.org/) (App Router), React 19
+- **Dizayn**: Vanilla CSS (Google Fonts: *Fredoka*, *Outfit*, *Nunito*), Glassmorphism, Claymorphism
+- **Grafika**: Vektor SVG, Canvas PNG eksport, 3D sun'iy intellekt orqali yaratilgan brend san'ati
+- **Audio**: Web Audio API (Sintezator)
+- **Partikllar**: Canvas-confetti
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+© 2026 **Quvnoq Bolachalar**. Loyiha muallifi: **Odilova Mahsudaxon** ❤️

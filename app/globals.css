@@ -1,49 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --primary: #FF5E36;
+  --primary-light: #FF805E;
+  --primary-dark: #E03E15;
+  --secondary: #20BF6B;
+  --accent-yellow: #FFBD00;
+  --accent-purple: #8854D0;
+  --accent-blue: #0984E3;
+  --accent-pink: #FD79A8;
+  --accent-cyan: #00CEC9;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+  --bg-gradient: linear-gradient(135deg, #F8FAFC 0%, #EFF6FF 50%, #FEF3C7 100%);
+  --bg-card: rgba(255, 255, 255, 0.92);
+  --border-card: rgba(255, 255, 255, 0.8);
+  
+  --text-main: #1E293B;
+  --text-muted: #64748B;
+  --text-light: #94A3B8;
 
-html {
-  height: 100%;
-}
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 20px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 20px 30px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-glow: 0 0 25px rgba(255, 94, 54, 0.35);
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
 
-body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --font-heading: 'Fredoka', 'Outfit', sans-serif;
+  --font-body: 'Nunito', sans-serif;
 }
 
 * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 
-a {
-  color: inherit;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--text-main);
+  min-height: 100vh;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Sarlavhalar */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-main);
+}
+
+/* Konteyner */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* Tugmalar */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.6rem;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
   text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  user-select: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.btn:active {
+  transform: scale(0.96);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+  color: #FFFFFF;
+  box-shadow: 0 8px 20px rgba(255, 107, 107, 0.35);
+}
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(255, 107, 107, 0.45);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #20BF6B 0%, #00CEC9 100%);
+  color: #FFFFFF;
+  box-shadow: 0 8px 20px rgba(32, 191, 107, 0.35);
+}
+.btn-secondary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(32, 191, 107, 0.45);
+}
+
+.btn-accent {
+  background: linear-gradient(135deg, #FFBD00 0%, #FF9F1C 100%);
+  color: #381E00;
+  box-shadow: 0 8px 20px rgba(255, 189, 0, 0.35);
+}
+.btn-accent:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(255, 189, 0, 0.45);
+}
+
+.btn-purple {
+  background: linear-gradient(135deg, #8854D0 0%, #6C5CE7 100%);
+  color: #FFFFFF;
+  box-shadow: 0 8px 20px rgba(136, 84, 208, 0.35);
+}
+.btn-purple:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(136, 84, 208, 0.45);
+}
+
+.btn-white {
+  background: #FFFFFF;
+  color: var(--text-main);
+  border: 2px solid #E2E8F0;
+}
+.btn-white:hover {
+  background: #F8FAFC;
+  transform: translateY(-2px);
+  border-color: #CBD5E1;
+}
+
+/* Kartochkalar */
+.card {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  border: 2px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 1.5rem;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(255, 255, 255, 1);
+}
+
+/* Nishonlar */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.85rem;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  background: #E2E8F0;
+  color: var(--text-main);
+}
+
+/* Modal oyna */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  animation: fadeIn 0.25s ease-out;
+  overflow-y: auto;
+}
+
+.modal-content {
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 720px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  animation: popIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  border: 4px solid #F1F5F9;
+}
+
+.modal-content-wide {
+  max-width: 960px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #F1F5F9;
+  border: none;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: var(--text-muted);
+  z-index: 10;
+}
+.modal-close:hover {
+  background: #E2E8F0;
+  color: var(--text-main);
+  transform: rotate(90deg);
+}
+
+/* Animatsiyalar */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.9) translateY(20px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes bounceSlow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 15px rgba(255, 189, 0, 0.4); }
+  50% { box-shadow: 0 0 30px rgba(255, 189, 0, 0.8); }
+}
+
+.animate-float {
+  animation: bounceSlow 3s ease-in-out infinite;
+}
+
+.glow-pulse {
+  animation: pulseGlow 2s infinite;
+}
+
+/* Diplom Chop Etish Uslubi */
+@media print {
+  body {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+  }
+  header, footer, .no-print, .modal-overlay:not(#diploma-print-area) {
+    display: none !important;
+  }
+  .diploma-card {
+    border: 8px double #D4AF37 !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+    margin: 0 auto !important;
+    width: 100% !important;
   }
 }
+
+/* =========================================
+   MOBILE & TABLET RESPONSIVE OPTIMIZATION
+   ========================================= */
+
+@media (max-width: 992px) {
+  .desktop-nav {
+    display: none !important;
+  }
+  .mobile-burger-btn {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .modal-overlay {
+    padding: 0.5rem;
+    align-items: flex-end; /* Mobile bottom sheet style or centered */
+  }
+
+  .modal-content {
+    border-radius: 24px 24px 16px 16px;
+    max-height: 92vh;
+    padding: 1.25rem 1rem !important;
+    border-width: 2px;
+  }
+
+  .modal-close {
+    top: 0.65rem;
+    right: 0.65rem;
+    width: 34px;
+    height: 34px;
+    font-size: 1.15rem;
+  }
+
+  /* iOS input auto-zoom oldini olish */
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+
+  .card {
+    padding: 1.25rem;
+    border-radius: 20px;
+  }
+
+  .btn {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    padding: 1rem 0.75rem !important;
+  }
+
+  h1 {
+    font-size: 1.95rem !important;
+  }
+
+  h2 {
+    font-size: 1.55rem !important;
+  }
+
+  .diploma-card {
+    padding: 1.4rem 1rem !important;
+    border-width: 6px double !important;
+  }
+
+  .diploma-card h2,
+  .diploma-card div[style*="font-size: 2.5rem"],
+  .diploma-card div[style*="font-size: 2rem"] {
+    font-size: 1.4rem !important;
+  }
+}
+
+.leader-row {
+  display: grid;
+  grid-template-columns: 50px 1fr 120px 100px;
+  align-items: center;
+  padding: 0.9rem 1.25rem;
+}
+
+@media (max-width: 640px) {
+  .leader-row {
+    grid-template-columns: 36px 1fr 75px 65px;
+    padding: 0.75rem 0.85rem;
+    font-size: 0.88rem;
+  }
+}
+
